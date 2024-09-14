@@ -16,15 +16,33 @@ const wishlistRoutes=require("./routes/Wishlist")
 const { connectToDB } = require("./database/db")
 
 
+
+
 // server init
 const server=express()
+
+server.use(cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+    exposedHeaders: ['X-Total-Count'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+server.options('/', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.send();
+});
+
 
 // database connection
 connectToDB()
 
 
-// middlewares
-server.use(cors({origin:process.env.ORIGIN,credentials:true,exposedHeaders:['X-Total-Count'],methods:['GET','POST','PATCH','DELETE']}))
+
+
 server.use(express.json())
 server.use(cookieParser())
 server.use(morgan("tiny"))

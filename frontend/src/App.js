@@ -11,7 +11,7 @@ import { useFetchLoggedInUserDetails } from "./hooks/useAuth/useFetchLoggedInUse
 import { AddProductPage, AdminOrdersPage, CartPage, CheckoutPage, ForgotPasswordPage, HomePage, LoginPage, OrderSuccessPage, OtpVerificationPage, ProductDetailsPage, ProductUpdatePage, ResetPasswordPage, SignupPage, UserOrdersPage, UserProfilePage, WishlistPage } from './pages';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-
+import TryOn from './features/tryon/TryOn';
 
 function App() {
 
@@ -48,6 +48,9 @@ function App() {
             // user routes
             <>
             <Route path='/' element={<Protected><HomePage/></Protected>}/>
+            <Route path='/tryout' element={
+             <TryOn/>
+            }/>
             <Route path='/cart' element={<Protected><CartPage/></Protected>}/>
             <Route path='/profile' element={<Protected><UserProfilePage/></Protected>}/>
             <Route path='/checkout' element={<Protected><CheckoutPage/></Protected>}/>

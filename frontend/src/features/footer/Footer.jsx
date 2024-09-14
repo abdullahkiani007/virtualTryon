@@ -27,15 +27,14 @@ export const Footer = () => {
                 <Stack rowGap={'1rem'} padding={'1rem'}>
                     <Typography variant='h6' fontSize={'1.5rem'}>Exclusive</Typography>
                     <Typography variant='h6'>Subscribe</Typography>
-                    <Typography sx={labelStyles}>Get 10% off your first order</Typography>
                     <TextField placeholder='Enter your email' sx={{border:'1px solid white',borderRadius:"6px"}} InputProps={{endAdornment:<IconButton><SendIcon sx={{color:theme.palette.primary.light}}/></IconButton>,style:{color:"whitesmoke"}}}/>
                 </Stack>
 
                 <Stack rowGap={'1rem'} padding={'1rem'}>
                     <Typography variant='h6'>Support</Typography>
-                    <Typography sx={labelStyles}>11th Main Street, Dhaka,  DH 1515, California.</Typography>
+                    <Typography sx={labelStyles}>VIP Street, Hostel City, Islamabad.</Typography>
                     <Typography sx={labelStyles}>exclusive@gmail.com</Typography>
-                    <Typography sx={labelStyles}>+88015-88888-9999</Typography>
+                    <Typography sx={labelStyles}>+9215-88888-9999</Typography>
                 </Stack>
 
                 <Stack rowGap={'1rem'} padding={'1rem'}>
@@ -88,7 +87,7 @@ export const Footer = () => {
 
             {/* lower */}
             <Stack alignSelf={"center"}>
-                <Typography color={'GrayText'}>&copy; Mern Store {new Date().getFullYear()}. All right reserved</Typography>
+                <Typography color={'GrayText'}>&copy; Virtual Wardrobe {new Date().getFullYear()}. All right reserved</Typography>
             </Stack>
 
     </Stack>
