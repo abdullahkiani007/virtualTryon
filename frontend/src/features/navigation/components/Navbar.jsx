@@ -128,8 +128,25 @@ export const Navbar=({isProductList=false})=> {
             }
             
             </Stack>
-            <button onClick={()=>navigate("/tryout")}>TryOut</button>
-          </Stack>
+            <button 
+              onClick={() => navigate("/tryout")} 
+              style={{
+                backgroundColor: '#6B46C1', // Purple background
+                color: '#fff', // White text
+                padding: '0.75rem 1.5rem', // Padding
+                borderRadius: '0.375rem', // Rounded corners
+                border: 'none', // No border
+                cursor: 'pointer', // Pointer cursor on hover
+                fontSize: '1rem', // Font size
+                fontWeight: 'bold', // Bold text
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Subtle shadow
+                transition: 'background-color 0.3s ease', // Smooth transition
+              }}
+              onMouseOver={(e) => e.target.style.backgroundColor = '#553C9A'} // Darker purple on hover
+              onMouseOut={(e) => e.target.style.backgroundColor = '#6B46C1'} // Original color on mouse out
+            >
+              TryOut
+            </button>          </Stack>
         </Toolbar>
     </AppBar>
   );
